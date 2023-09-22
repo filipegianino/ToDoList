@@ -4,7 +4,7 @@ import React, { useState, ChangeEvent, FormEvent, useEffect } from "react";
 import { ITask } from "../interfaces/Task";
 
 // styles
-import styles from "./taskForm.css";
+import styles from "./taskForm.module.css";
 
 interface Props {
   btnText: string;
@@ -65,21 +65,21 @@ const TaskForm = ({
   return (
     <form onSubmit={addTaskHandler} className={styles.form}>
       <div className={styles.input_container}>
-        <label htmlFor="title">Título:</label>
+        <label htmlFor="title">Title:</label>
         <input
           type="text"
           name="title"
-          placeholder="Título da tarefa"
+          placeholder="Task Title"
           value={title}
           onChange={handleChange}
         />
       </div>
       <div className={styles.input_container}>
-        <label htmlFor="difficulty">Dificuldade:</label>
+        <label htmlFor="difficulty">Difficulty:</label>
         <input
           type="number"
           name="difficulty"
-          placeholder="Dificuldade da tarefa (1 a 5)"
+          placeholder="Difficulty: (1 a 5)"
           value={difficulty}
           onChange={handleChange}
         />

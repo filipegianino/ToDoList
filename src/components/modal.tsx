@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./modal.css";
+import styles from "./modal.module.css";
 
 interface Props {
   children: React.ReactNode;

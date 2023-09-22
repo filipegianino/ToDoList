@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import styles from "./app.css";
+import styles from "./app.module.css";
 
 // components
-import Footer from "./components/footer";
 import Header from "./components/header";
-import Modal from "./components/modal";
+import Footer from "./components/footer";
 import TaskForm from "./components/taskForm";
-import TaskList from "./components/taskList.css";
+import TaskList from "./components/taskList";
+import Modal from "./components/modal";
 
 // interfaces
 import { ITask } from "./interfaces/Task";
@@ -52,10 +52,10 @@ function App() {
   return (
     <div>
       <Modal
-        title="Editar tarefa"
+        title="Edit Task"
         children={
           <TaskForm
-            btnText="Editar"
+            btnText="Edit"
             taskList={taskList}
             task={taskToUpdate}
             handleUpdate={updateTask}
@@ -65,15 +65,15 @@ function App() {
       <Header />
       <main className={styles.main}>
         <div className={styles.todo_form}>
-          <h2>O que você vai fazer?</h2>
+          <h2>What's the task?</h2>
           <TaskForm
             taskList={taskList}
             setTaskList={setTaskList}
-            btnText="Cadastrar"
+            btnText="Register"
           />
         </div>
         <div className="todo-container">
-          <h2>Suas tarefas:</h2>
+          <h2>Your Tasks:</h2>
           <TaskList
             taskList={taskList}
             handleDelete={deleteTask}
@@ -84,6 +84,8 @@ function App() {
       <Footer />
     </div>
   );
+  
+  
 }
 
 export default App;

@@ -10,11 +10,14 @@
     margin-bottom: 1.5em;
     border-radius: 0;
     border: 1px solid #282c34;
+    border-radius: 6px;
+
   }
   
   .form input[type="submit"] {
     background-color: #61dafb;
     border: 1px solid #61dafb;
+    border-radius: 6px;
     color: #000;
     transition: 0.5s;
     cursor: pointer;
